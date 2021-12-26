@@ -2,3 +2,41 @@
     color: green;
     text-align: center;
 }
+
+.navigation{
+    background-color: #1b1b1b;
+}
+.navigation a{
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+}
+.navigation a:hover{
+    background-color: white;
+    color: black;
+}
+
+.main h1{
+    padding-top: 100px;
+    font-size: 4em;
+}
+.main{
+    align-items: center;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.main button{
+    color: white;
+    background-color: black;
+    font-size: 25px;
+}
+
+.main button:hover{
+    background-color: #00d861;
+}
+.footer{
+    text-align: center;
+    background-color: black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: white;
+}
