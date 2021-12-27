@@ -31,7 +31,7 @@
 }
 
 .main button:hover{
-    background-color: #00d861;
+    background-color: #08286e;
 }
 .footer{
     text-align: center;
@@ -39,4 +39,27 @@
     padding-top: 20px;
     padding-bottom: 20px;
     color: white;
+}
+.cform{
+    padding-top: 30px;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+.cform label{
+    font-size: 20px;
+}
+
+.button{
+    color: white;
+    background-color: black;
+    font-size: 25px;
+    border-radius: 10px;
+}
+.button:hover{
+    border-radius: 10px;
+    background-color: #08286e;
+}
+.thanks{
+    text-align: center;
+    padding: 20%;
 }
