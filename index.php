@@ -10,9 +10,9 @@ include ("head.php"); // ()parenthesis
         <h1>Sipder Man Movie Download</h1>
         <button type="button" class="btn btn-primary">Download Now</button>
     </div>
-    <div class="footer">
-        <footer>Copyright 2021 By | Sahil Kumar</footer>
-    </div>
+    <!-- Footer Start -->
+    <?php include ("footer.php");?>
+    <!-- Footer End -->
 </body>
 
 </html>

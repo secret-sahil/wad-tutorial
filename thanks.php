@@ -10,6 +10,9 @@ include ("head.php"); // ()parenthesis
         <br>
         <a href="./index.php"><button class="button">Back To Home</button></a>
     </div>
+    <!-- Footer Start -->
+    <?php include ("footer.php");?>
+    <!-- Footer End -->
 </body>
 
 </html>
