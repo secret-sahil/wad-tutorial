@@ -10,15 +10,15 @@ include ("head.php"); // ()parenthesis
     <div class="cform">
       <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Full Name</label>
-        <input type="text" class="form-control" id="exampleFormControlInput1" name="fullname" placeholder="Full Name">
+        <input type="text" class="form-control" id="exampleFormControlInput1" name="fullname" placeholder="Full Name" required>
       </div>
       <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="exampleFormControlInput2" name="email" placeholder="name@example.com">
+        <input type="email" class="form-control" id="exampleFormControlInput2" name="email" placeholder="name@example.com" required>
       </div>
       <div class="mb-3">
         <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" name="message" rows="3"></textarea>
+        <textarea class="form-control" id="exampleFormControlTextarea1" name="message" rows="3" required></textarea>
       </div>
       <button type="submit" class="button">Submit</button>
     </div>
