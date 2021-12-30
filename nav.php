@@ -11,7 +11,7 @@
       </li>
       
       <li class="nav-item">
-        <a class="nav-link">T & C</a>
+        <a class="nav-link" href="pull.php" >View Contact Forms</a>
       </li>
     </ul>
   </div>

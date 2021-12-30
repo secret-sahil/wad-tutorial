@@ -1,21 +1,10 @@
 <?php
     session_start();
-    $fullname= $_POST["fullname"];
-    $email= $_POST["email"];
+    $fullname= $_POST["f"];
+    $email= $_POST["e"];
     $message= $_POST["message"];
     $_SESSION["name"]=$fullname;
-    // creating connection with DB using PDO 
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname= "wad";
-    try {
-    $db = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "Connected successfully";
-    } catch(PDOException $e) {
-    echo "Connection failed: " . $e->getMessage();
-    }
+    require_once("db.php");
 
     //storing data into cform table
     $query= $db->prepare('INSERT INTO cform (fullname, email, message) VALUES (:fullname, :email, :message)');
