@@ -65,6 +65,12 @@
 }
 
 .tablebox{
+    padding-top: 10px;
     padding-left: 15%;
     padding-right: 15%;
+}
+
+tr{
+    text-align: center;
+    background-color: rgb(173, 173, 173);
 }
