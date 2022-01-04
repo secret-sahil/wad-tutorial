@@ -9,18 +9,33 @@ $query= $db->query("SELECT * FROM cform");
     echo'<tr><th>S.no</th>
     <th>Full Name</th>
     <th>Email ID</th>
-    <th>Message By user</th></tr>
+    <th>Message By user</th>
+    <th>Operations</th>
+    </tr>
     ';
 $a=1;
     while($data= $query->fetch()){
         
         echo "<tr>";
-        echo "<td>".$a."</td>";
+        echo "<td>".$data['sno']."</td>";
         echo "<td>".$data['fullname']."</td>";
         echo "<td>".$data['email']."</td>";
         echo "<td>".$data['message']."</td>";
+        echo "<td><a id='del' href='pull.php?delete=".$data['sno']."'>Deltete</a></td>";
         echo "</tr>";
         $a=$a+1;
     }
     echo'</table></div>';
+
+function delete(){
+    if (isset($_GET['delete'])){
+    include('db.php');
+    $query= $db->prepare('delete from cform where sno=:sno');
+    $query->execute(array(
+        ":sno"=>$_GET['delete']
+    ));
+    header('location:pull.php');
+}
+}
+delete();
 ?>

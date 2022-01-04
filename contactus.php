@@ -8,17 +8,28 @@ include ("head.php"); // ()parenthesis
   <!-- Nav Bar end -->
   <form action="push.php" method="POST">
     <div class="cform">
+      <?php 
+      if (isset($_GET['emptyf'])){
+        echo'<p>Full name can never be empty!<p>';
+      }
+      elseif (isset($_GET['emptye'])){
+        echo'<p>Email can never be empty!<p>';
+      }
+      elseif (isset($_GET['emptym'])){
+        echo'<p>Message can never be empty!<p>';
+      }
+      ?>
       <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Full Name</label>
-        <input type="text" class="form-control" id="exampleFormControlInput1" name="f" placeholder="Full Name" required>
+        <input type="text" class="form-control" id="exampleFormControlInput1" name="f" placeholder="Full Name">
       </div>
       <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="exampleFormControlInput2" name="e" placeholder="name@example.com" required>
+        <input type="email" class="form-control" id="exampleFormControlInput2" name="e" placeholder="name@example.com">
       </div>
       <div class="mb-3">
         <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" name="message" rows="3" required></textarea>
+        <textarea class="form-control" id="exampleFormControlTextarea1" name="message" rows="3"></textarea>
       </div>
       <button type="submit" class="button">Submit</button>
     </div>
