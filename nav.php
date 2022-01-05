@@ -1,17 +1,24 @@
-<div class="navigation">
-    <ul class="nav justify-content-center">
-      <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="index.php">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="aboutus.html">About Us</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="contactus.php">Contact Us</a>
-      </li>
-      
-      <li class="nav-item">
-        <a class="nav-link" href="pull.php" >View Contact Forms</a>
-      </li>
-    </ul>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+  <a class="navbar-brand" href="#">
+      <img src="data:image/png;base64,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" alt="" width="30" height="24">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="http://localhost/wad-tutorial/index.php">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="contactus.php">Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="http://localhost/wad-tutorial/pull.php">View Contact Form</a>
+        </li>
+      </ul>
+      <a href="admin/index.php"><button class="d-flex btn btn-outline-success" type="submit">Login/SignUp</button></a>
+    </div>
   </div>
+</nav>

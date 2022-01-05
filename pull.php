@@ -1,6 +1,15 @@
 <?php 
-include ("head.php");
-include ("nav.php");
+include ("head.php");?>
+
+<script>
+    function del(sno){
+        if (confirm("Do you really want to delete")){
+            window.location.href= 'pull.php?delete='+sno
+        }
+    }
+</script>
+
+<?php include ("nav.php");
 include ("db.php");
 
 $query= $db->query("SELECT * FROM cform");
@@ -21,7 +30,7 @@ $a=1;
         echo "<td>".$data['fullname']."</td>";
         echo "<td>".$data['email']."</td>";
         echo "<td>".$data['message']."</td>";
-        echo "<td><a id='del' href='pull.php?delete=".$data['sno']."'>Deltete</a></td>";
+        echo "<td><button onClick=del(".$data['sno'].")>Deltete</button></td>";
         echo "</tr>";
         $a=$a+1;
     }
@@ -38,4 +47,5 @@ function delete(){
 }
 }
 delete();
+include "footer.php";
 ?>
