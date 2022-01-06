@@ -1,17 +1,20 @@
 <?php 
-include ("head.php");?>
+include ("head.php");
+include ("nav.php");
+if (empty($_SESSION['login'])) {
+  header('location:login.php');
+}
+?>
 
 <script>
     function del(sno){
-        if (confirm("Do you really want to delete")){
-            window.location.href= 'pull.php?delete='+sno
+        if (confirm("Do you really dant to delete!")){
+            window.location.href="pull.php?delete="+sno
         }
     }
 </script>
 
-<?php include ("nav.php");
-include ("db.php");
-
+<?php include ("db.php");
 $query= $db->query("SELECT * FROM cform");
     echo '<div class="tablebox">';
     echo'<table class="table">';
@@ -26,18 +29,18 @@ $a=1;
     while($data= $query->fetch()){
         
         echo "<tr>";
-        echo "<td>".$data['sno']."</td>";
+        echo "<td>".$a."</td>";
         echo "<td>".$data['fullname']."</td>";
         echo "<td>".$data['email']."</td>";
         echo "<td>".$data['message']."</td>";
-        echo "<td><button onClick=del(".$data['sno'].")>Deltete</button></td>";
+        echo "<td><button onclick=del(".$data['sno'].")>Delete</button></td>";
         echo "</tr>";
         $a=$a+1;
     }
     echo'</table></div>';
 
-function delete(){
-    if (isset($_GET['delete'])){
+
+if (isset($_GET['delete'])){
     include('db.php');
     $query= $db->prepare('delete from cform where sno=:sno');
     $query->execute(array(
@@ -45,7 +48,5 @@ function delete(){
     ));
     header('location:pull.php');
 }
-}
-delete();
 include "footer.php";
 ?>

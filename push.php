@@ -7,13 +7,13 @@
     require_once("db.php");
     //storing data into cform table
     if (empty($fullname)) {
-        header('location:contactus.php?emptyf="1"');
+        header('location:contactus.php?empty="1"');
     }
     elseif (empty($email)) {
-        header('location:contactus.php?emptye="1"');
+        header('location:contactus.php?empty="1"');
     }
     elseif (empty($message)) {
-        header('location:contactus.php?emptym="1"');
+        header('location:contactus.php?empty="1"');
     }
     else{
     $query= $db->prepare('INSERT INTO cform (fullname, email, message) VALUES (:fullname, :email, :message)');
@@ -25,5 +25,4 @@
     //redirecting to thanks.php page
     header ("location:thanks.php");
     }
-    
 ?>

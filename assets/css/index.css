@@ -4,7 +4,7 @@
 }
 
 .navigation{
-    background-color: #1b1b1b;
+    background-color: #212529;
 }
 .navigation a{
     font-size: 25px;
@@ -12,7 +12,7 @@
 }
 .navigation a:hover{
     background-color: white;
-    color: black;
+    color: #212529;
 }
 
 .main h1{
@@ -26,12 +26,12 @@
 }
 .main button{
     color: white;
-    background-color: black;
+    background-color: #212529;
     font-size: 25px;
 }
 
 .main button:hover{
-    background-color: #08286e;
+    background-color: #198754;
 }
 .footer{
     text-align: center;
@@ -57,7 +57,7 @@
 }
 .button:hover{
     border-radius: 10px;
-    background-color: #08286e;
+    background-color: #198754;
 }
 .thanks{
     text-align: center;
@@ -73,4 +73,12 @@
 tr{
     text-align: center;
     background-color: rgb(173, 173, 173);
+}
+
+.nounderline{
+    text-decoration: none;
+}
+
+.error{
+    color: red;
 }

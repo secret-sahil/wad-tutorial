@@ -9,14 +9,8 @@ include ("head.php"); // ()parenthesis
   <form action="push.php" method="POST">
     <div class="cform">
       <?php 
-      if (isset($_GET['emptyf'])){
-        echo'<p>Full name can never be empty!<p>';
-      }
-      elseif (isset($_GET['emptye'])){
-        echo'<p>Email can never be empty!<p>';
-      }
-      elseif (isset($_GET['emptym'])){
-        echo'<p>Message can never be empty!<p>';
+      if (isset($_GET['empty'])){
+        echo'<p class="error">All fields are mandatory!<p>';
       }
       ?>
       <div class="mb-3">
